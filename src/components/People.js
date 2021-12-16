@@ -41,7 +41,7 @@ class People extends React.Component {
         event.preventDefault();
         
         this.setState({
-            currentCharacter: this.state.currentCharacter
+            currentCharacter: event.target.value
         })
     }
 
