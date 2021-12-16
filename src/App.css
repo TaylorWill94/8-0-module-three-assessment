@@ -14,7 +14,8 @@
 
 a {
   background-color: aqua;
- padding: 25px;
+  color: black;
+  padding: 25px;
 }
 
 input {
@@ -38,4 +39,10 @@ select {
   background-color: white;
   border: 1px solid white;
   padding: 5px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
 }

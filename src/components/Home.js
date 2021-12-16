@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div>
-            <h1>Welcome to GhibiliApp</h1>
+            <h1>Welcome to GhibliApp</h1>
         </div>
 
     )
