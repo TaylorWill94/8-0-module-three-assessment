@@ -1,3 +1,14 @@
+* {
+  background-color: rgb(187, 127, 17);
+}
+
 .app {
   text-align: center;
+  font-size: 20px;
 }
+
+.nav {
+  background-color: aqua;
+  padding: 25px;
+}
+
