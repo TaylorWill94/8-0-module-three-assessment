@@ -12,3 +12,30 @@
   padding: 25px;
 }
 
+a {
+  background-color: aqua;
+ padding: 25px;
+}
+
+input {
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+button {
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+select {
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px;
+}

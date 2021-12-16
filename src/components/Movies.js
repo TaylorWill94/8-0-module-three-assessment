@@ -5,6 +5,7 @@ class Movies extends React.Component {
         super();
         this.state = {
             movies: [],
+            currentMovie: [],
         }
     }
 
@@ -25,6 +26,12 @@ class Movies extends React.Component {
     }
 
 
+    handleMovieChange = (event) => {
+        this.setState({
+            currentMovie: event.target.value
+        })
+    }
+
 
 
     render() {
@@ -32,13 +39,26 @@ class Movies extends React.Component {
         return <option key={i}>{movie.title}</option>
     })
 
+    const currentMovie = this.state.movies.find((current) => {
+        if (this.state.currentMovie === current.title) {
+        return <div>{current.title} 
+                    {current.release_date}
+                    {current.description}
+                    </div>
+          }
+        
+    })
+
+
         return (
             <div className='movies'>
                 <h1>Select a Movie</h1>
-                <select>
+                <select onChange={this.handleMovieChange}>
                     <option></option>
                     {allMovies}
                 </select>
+                <p>{this.state.currentMovie}</p>
+                
                 </div>
         )
     }
