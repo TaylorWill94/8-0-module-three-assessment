@@ -30,21 +30,32 @@ class People extends React.Component {
         })
     }
 
-
     // handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     let displayCharacter = this.state.characters.map((character) => {
-    //         if (this.state.currentCharacter === character.name) {
-    //             return <div>{character.name}</div>
-    //         }
-           
-    //     })
     //     this.setState({
-    //         currentCharacter: {displayCharacter}
+    //         currentCharacter: [...this.state.currentCharacter, event.target.value]
     //     })
     // }
 
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        
+        this.setState({
+            currentCharacter: this.state.currentCharacter
+        })
+    }
+
     render() {
+        const allCharacters = this.state.characters.map((character, i) => {
+            if (this.state.currentCharacter === character.name) {
+            return <p key={i}>
+                      Name {character.name}<br></br>
+                      Age: {character.age}<br></br>
+                      Gender: {character.gender}</p>
+            }
+        })
+
+
         return (
             <div className='people'>
                 <h1>Search for a Person</h1>
@@ -53,6 +64,7 @@ class People extends React.Component {
                     <button onClick={this.handleSubmit}>Submit</button>
                 </form>
                 {this.state.currentCharacter ? true : 'Not Found'}
+                {allCharacters}
                 </div>
         )
     }
