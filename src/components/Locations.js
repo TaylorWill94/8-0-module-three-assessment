@@ -41,6 +41,10 @@ class Locations extends React.Component {
     this.setState({
       text: 'Hide Locations',
     })
+    } else {
+        this.setState({
+            text: 'Show Locations'
+        })
     }
   };
 
@@ -66,6 +70,7 @@ class Locations extends React.Component {
         >
           {this.state.text}
         </button>
+        {this.state.showLocations ? showAll : ''}
       </div>
     );
   }
